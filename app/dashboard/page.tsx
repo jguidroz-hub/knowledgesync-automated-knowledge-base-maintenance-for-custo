@@ -28,13 +28,13 @@ export default function DashboardPage() {
 
       <h2 className="text-lg font-semibold mb-4">Quick Access</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-8">
-          <a href="/dashboard/articles" className="block p-4 border rounded-lg hover:bg-blue-50 transition">
+          <a href="/dashboard/knowledgeArticles" className="block p-4 border rounded-lg hover:bg-blue-50 transition">
             <h3 className="font-medium">Knowledge Base Management</h3>
-            <p className="text-sm text-gray-500">View and manage knowledge base articles</p>
+            <p className="text-sm text-gray-500">View and manage knowledge base knowledgeArticles</p>
           </a>
-          <a href="/dashboard/tickets" className="block p-4 border rounded-lg hover:bg-blue-50 transition">
+          <a href="/dashboard/supportTickets" className="block p-4 border rounded-lg hover:bg-blue-50 transition">
             <h3 className="font-medium">Support Ticket Insights</h3>
-            <p className="text-sm text-gray-500">Analyze incoming support tickets</p>
+            <p className="text-sm text-gray-500">Analyze incoming support supportTickets</p>
           </a>
         <a href="/dashboard/settings" className="block p-4 border rounded-lg hover:bg-blue-50 transition">
           <h3 className="font-medium">Settings</h3>

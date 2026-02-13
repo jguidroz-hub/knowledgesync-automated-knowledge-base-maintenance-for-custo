@@ -4,7 +4,7 @@ export default function HomePage() {
       {/* Hero */}
       <section className="max-w-4xl mx-auto px-6 py-20 text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">KnowledgeSync - Automated knowledge base maintenance for customer support teams</h1>
-        <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">Value Proposition: Automatically creates and updates knowledge base articles by analyzing support tickets, product changes, and user feedback to keep documentation current and comprehensive
+        <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">Value Proposition: Automatically creates and updates knowledge base knowledgeArticles by analyzing support supportTickets, product changes, and user feedback to keep documentation current and comprehensive
 
 Target Customer: SaaS companies, e-commerce businesses, and enterprises with customer support teams struggling with outdated documentation
 

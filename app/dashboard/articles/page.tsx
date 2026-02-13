@@ -17,7 +17,7 @@ export default function ArticlesPage() {
   const [newTitle, setNewTitle] = useState('');
 
   useEffect(() => {
-    fetch('/api/articles')
+    fetch('/api/knowledgeArticles')
       .then(r => r.json())
       .then(data => { setItems(data.items || []); setLoading(false); })
       .catch(() => setLoading(false));
@@ -25,7 +25,7 @@ export default function ArticlesPage() {
 
   const handleCreate = async () => {
     if (!newTitle.trim()) return;
-    const res = await fetch('/api/articles', {
+    const res = await fetch('/api/knowledgeArticles', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ title: newTitle }),
@@ -39,7 +39,7 @@ export default function ArticlesPage() {
   };
 
   const handleDelete = async (id: string) => {
-    await fetch(`/api/articles/${id}`, { method: 'DELETE' });
+    await fetch(`/api/knowledgeArticles/${id}`, { method: 'DELETE' });
     setItems(prev => prev.filter(i => i.id !== id));
   };
 
@@ -61,7 +61,7 @@ export default function ArticlesPage() {
         </button>
       </div>
 
-      <p className="text-gray-600 mb-6">View and manage knowledge base articles</p>
+      <p className="text-gray-600 mb-6">View and manage knowledge base knowledgeArticles</p>
 
       {showCreate && (
         <div className="mb-6 p-4 border rounded-lg bg-gray-50">

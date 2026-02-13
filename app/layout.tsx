@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'KnowledgeSync - Automated knowledge base maintenance for customer support teams',
-  description: 'Value Proposition: Automatically creates and updates knowledge base articles by analyzing support tickets, product changes, and user feedback to keep documentation current and comprehensive',
+  description: 'Value Proposition: Automatically creates and updates knowledge base knowledgeArticles by analyzing support supportTickets, product changes, and user feedback to keep documentation current and comprehensive',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

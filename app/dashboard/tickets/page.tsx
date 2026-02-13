@@ -17,7 +17,7 @@ export default function TicketsPage() {
   const [newTitle, setNewTitle] = useState('');
 
   useEffect(() => {
-    fetch('/api/tickets')
+    fetch('/api/supportTickets')
       .then(r => r.json())
       .then(data => { setItems(data.items || []); setLoading(false); })
       .catch(() => setLoading(false));
@@ -25,7 +25,7 @@ export default function TicketsPage() {
 
   const handleCreate = async () => {
     if (!newTitle.trim()) return;
-    const res = await fetch('/api/tickets', {
+    const res = await fetch('/api/supportTickets', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ title: newTitle }),
@@ -39,7 +39,7 @@ export default function TicketsPage() {
   };
 
   const handleDelete = async (id: string) => {
-    await fetch(`/api/tickets/${id}`, { method: 'DELETE' });
+    await fetch(`/api/supportTickets/${id}`, { method: 'DELETE' });
     setItems(prev => prev.filter(i => i.id !== id));
   };
 
@@ -61,7 +61,7 @@ export default function TicketsPage() {
         </button>
       </div>
 
-      <p className="text-gray-600 mb-6">Analyze incoming support tickets</p>
+      <p className="text-gray-600 mb-6">Analyze incoming support supportTickets</p>
 
       {showCreate && (
         <div className="mb-6 p-4 border rounded-lg bg-gray-50">
