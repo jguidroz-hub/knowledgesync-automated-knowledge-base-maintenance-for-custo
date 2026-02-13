@@ -39,7 +39,7 @@ export const knowledgeArticles = pgTable('knowledge_articles', {
   updatedAt: timestamp('updated_at').notNull(),
 });
 
-// Incoming support tickets for knowledge base analysis
+// Incoming support tickets for knowledge base knowledgeArticles
 export const supportTickets = pgTable('support_tickets', {
   id: text('id').primaryKey().notNull(),
   userId: text('user_id').notNull().references(() => users.id, { onDelete: 'cascade' }),
